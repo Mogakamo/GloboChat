@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <EditTextPreference
+        android:key="@string/key_status"
+        android:title="Status"
+        android:defaultValue="Turn wounds into wisdom"
+        app:iconSpaceReserved="false"
+        android:dialogTitle="Update status"
+        app:useSimpleSummaryProvider="true"
+        />
+
+    <SwitchPreferenceCompat
+        app:iconSpaceReserved="false"
+        android:title="Auto Reply"
+        android:key="@string/key_auto_reply"
+        android:defaultValue="false"
+        android:summary="Automatically reply to a message."
+    />
+
+    <ListPreference
+        android:dialogTitle="@string/title_dialog_reply_time"
+        android:key="@string/key_auto_reply_time"
+        android:title="@string/title_auto_reply_time"
+        app:iconSpaceReserved="false"
+        app:useSimpleSummaryProvider="true"
+        android:entries="@array/entries_auto_reply_time"
+        android:entryValues="@array/values_auto_reply_time"
+        />
 </PreferenceScreen>
